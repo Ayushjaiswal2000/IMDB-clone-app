@@ -3,10 +3,16 @@ let omdbApiKey = '176f1929';
 let searchQuery = ''; 
 
 
-
+const storedSearchQuery = sessionStorage.getItem('lastSearchQuery');
+if (storedSearchQuery) {
+    document.getElementById('searchInput').value = storedSearchQuery;
+    searchQuery = storedSearchQuery;
+    fetchData();
+}
 
 function performSearch() {
   searchQuery = document.getElementById('searchInput').value;
+  sessionStorage.setItem('lastSearchQuery', searchQuery);
   fetchData();
   
 }
