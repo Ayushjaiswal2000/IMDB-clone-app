@@ -1,0 +1,118 @@
+body {
+  background-color: #1a1a1a;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+ 
+  font-family: Arial, sans-serif;
+  color: white;
+}
+  .flex-container{
+    margin-top: 20px;
+    width: 70%;
+    margin-left: 14%;
+    display: flex;
+    flex-wrap: wrap;
+   text-align:  center;
+   justify-content: center;
+  }
+
+  #searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #554f4f;
+    margin-bottom: 20px;
+    width: 300px;
+    transition: background-color 0.3s;
+  }
+  
+  #searchInput:hover,
+  #searchInput:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .header {
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(148, 145, 145, 0.693); /* Added box shadow */
+    padding: 20px; /* Added padding for better visual separation */
+  }
+  i{
+    font-size: 1.3rem;
+    margin-right: 5px; 
+    margin-top: 2px;/* Adjust the spacing between the icon and input */
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #dfe840;
+   
+    
+  }
+  
+  
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(241, 235, 235, 0.622);
+    overflow: hidden;
+    width: 190px;
+    margin: 20px;
+    height: 400px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-content {
+    
+    padding: 16px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background-color: #f5f5f5; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .card:hover .title {
+    color: #ff5733; 
+  }
+  
+  .card:hover .release,
+  .card:hover .credits {
+    color: #555; 
+  }
+  
+
+  .card img {
+    width: 100%;
+    height: 250px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    
+        color: white; /* Set the movie title color to white */
+      
+  }
+
+  .release {
+    color: #555;
+    margin-bottom: 8px;
+  }
+
+  .credits {
+    font-style: italic;
+    color: #888;
+  }
