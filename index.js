@@ -90,6 +90,10 @@ function displayMovies(data) {
     window.location.href = `details.html?imdbID=${imdbID}`;
   }
 
+  function goToFavoritesPage() {
+    // Redirect to the favorites.html page or perform any other action
+    window.location.href = 'favorites.html';
+}
   
 
 

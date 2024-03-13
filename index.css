@@ -51,6 +51,7 @@ body {
     margin-top: 20px;
     font-size: 24px;
     color: #dfe840;
+    text-shadow: 2px 2px 4px rgba(98, 98, 98, 0.5);
    
     
   }
@@ -117,3 +118,20 @@ body {
     font-style: italic;
     color: #888;
   }
+
+  .favorites-btn {
+    margin-left: auto;
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dfe840; /* Green color for the button */
+    color: rgb(0, 0, 0); /* Text color */
+    cursor: pointer;
+    box-shadow: 0 2px 8px #f2ff03; 
+    border-bottom: 2px solid rgb(0, 0, 0);
+    transition: background-color 0.3s;
+  }
+  
+ 
