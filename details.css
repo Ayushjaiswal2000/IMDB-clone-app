@@ -21,13 +21,13 @@ body {
     height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(212, 209, 209, 0.829); /* Add box shadow for a subtle effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add box shadow for a subtle effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
 }
 
 .movie-details img:hover {
     transform: scale(1.05); /* Enlarge the image on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhance box shadow on hover */
+    /* Enhance box shadow on hover */
 }
 
 .title {

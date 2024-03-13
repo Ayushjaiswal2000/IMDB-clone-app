@@ -3,6 +3,8 @@ let omdbApiKey = '176f1929';
 let searchQuery = ''; 
 
 
+
+
 function performSearch() {
   searchQuery = document.getElementById('searchInput').value;
   fetchData();
