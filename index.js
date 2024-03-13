@@ -1,4 +1,4 @@
-const omdbApiKey = '176f1929';
+let omdbApiKey = '176f1929';
 
 let searchQuery = ''; 
 
@@ -16,7 +16,7 @@ async function fetchData() {
 
     if (response.ok) {
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
 
       const data = result.Search;
       displayMovies(data);
@@ -41,6 +41,11 @@ function displayMovies(data) {
       const image = document.createElement('img');
       image.src = movie.Poster;
       image.alt = 'Movie Poster';
+
+      //added event for poster 
+      image.addEventListener('click', () => {
+        navigateToDetailsPage(movie.imdbID);
+      });
   
       const content = document.createElement('div');
       content.classList.add('card-content');
@@ -71,7 +76,13 @@ function displayMovies(data) {
     moviesContainer.innerHTML = 'No results found';
   }
   }
- 
+
+  function navigateToDetailsPage(imdbID) {
+    // Redirect to details.html with IMDb ID as a query parameter
+    window.location.href = `details.html?imdbID=${imdbID}`;
+  }
+
+  
 
 
 
