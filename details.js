@@ -36,12 +36,19 @@ async function showMovieDetails(imdbID) {
     const title = document.getElementById('title');
     const info = document.getElementById('info');
     const plot = document.getElementById('plot');
-
+    const genre = document.getElementById('genre');
+    const director = document.getElementById('director');
+    const actors = document.getElementById('actors');
+  
     poster.src = movieDetails.Poster;
     title.textContent = movieDetails.Title;
     info.textContent = `Release Year: ${movieDetails.Year} | Type: ${movieDetails.Type}`;
     plot.textContent = `Plot: ${movieDetails.Plot}`;
-}
+    genre.textContent = `Genre: ${movieDetails.Genre}`;
+    director.textContent = `Director: ${movieDetails.Director}`;
+    actors.textContent = `Actors: ${movieDetails.Actors}`;
+  }
+  
 
 
 function getQueryParam(name) {
