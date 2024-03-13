@@ -1,3 +1,5 @@
+
+
 let omdbApiKey = '176f1929';
 
 let searchQuery = ''; 
@@ -66,13 +68,18 @@ function displayMovies(data) {
       release.classList.add('release');
       release.textContent = `Release Year: ${movie.Year}`;
   
-      // const credits = document.createElement('div');
-      // credits.classList.add('credits');
-      // credits.textContent = `Type: ${movie.Type}`;
+      const addToFavoritesBtn = document.createElement('button');
+      addToFavoritesBtn.classList.add('add-to-favorites-btn');
+      addToFavoritesBtn.textContent = 'Add to Favorites';
+
+      // Add event listener for the "Add to Favorites" button
+      addToFavoritesBtn.addEventListener('click', () => {
+        addToFavorites(movie.imdbID);
+      });
   
       content.appendChild(title);
       content.appendChild(release);
-      // content.appendChild(credits);
+      content.appendChild(addToFavoritesBtn);
   
       card.appendChild(image);
       card.appendChild(content);
@@ -94,6 +101,49 @@ function displayMovies(data) {
     // Redirect to the favorites.html page or perform any other action
     window.location.href = 'favorites.html';
 }
+
+
+async function addToFavorites(imdbID) {
+  
+  const movie=await getMoviesDetails(imdbID);
+  if(movie){
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const existingIndex = favorites.findIndex(movie => movie.imdbID === imdbID);
+
+  if (existingIndex === -1) {
+    // If not in favorites, add it
+    favorites.push(movie);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    alert(`${movie.Title} is added to your favorites`);
+  } else {
+    // If already in favorites, remove it
+    favorites.splice(existingIndex, 1);
+  }
+  
+
+  }
+
+}
+
+
+async function getMoviesDetails(imdbID) {
+  try {
+    const response = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=${omdbApiKey}`);
+    const data = await response.json();
+
+    if (data.Response === 'True') {
+      return data;
+    } else {
+      console.error(`Error fetching movie details: ${data.Error}`);
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching movie details:', error);
+    return null;
+  }
+}
+
+
   
 
 
