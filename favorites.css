@@ -25,10 +25,27 @@ body {
    
     
   }
-  .favorites-container{
-    display: flex !important;
-    justify-content: center !important;
-    /* text-align: center; */
+  #favorites-container{
+    margin-top: 20px;
+    width: 70%;
+    margin-left: 14%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   
+  }
+
+  .remove-from-favorites-btn{
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #ff0000; /* Blue color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
 
   .card {
@@ -91,3 +108,12 @@ body {
     font-style: italic;
     color: #888;
   }
+
+  .go-back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #dfe840;
+    font-size: 18px;
+}

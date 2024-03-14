@@ -30,7 +30,7 @@
 
         const removeBtn = document.createElement('button');
         removeBtn.classList.add('remove-from-favorites-btn');
-        removeBtn.textContent = 'Remove from Favorites';
+        removeBtn.textContent = 'Remove';
   
         // Add event listener for the "Remove from Favorites" button
         removeBtn.addEventListener('click', () => {
@@ -46,7 +46,7 @@
         favoritesContainer.appendChild(card);
       });
     } else {
-      favoritesContainer.innerHTML = 'No favorites added.';
+      favoritesContainer.innerHTML = '<br>No favorites added.';
     }
   }
   
@@ -62,5 +62,11 @@
   
     // Update the UI to reflect the changes
     updateFavoritesUI();
+  }
+
+
+  function goBack() {
+    // Redirect to the index page
+    window.location.href = 'index.html';
   }
   
