@@ -67,6 +67,6 @@
 
   function goBack() {
     // Redirect to the index page
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
   }
   

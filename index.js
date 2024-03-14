@@ -94,12 +94,12 @@ function displayMovies(data) {
 
   function navigateToDetailsPage(imdbID) {
     // Redirect to details.html with IMDb ID as a query parameter
-    window.location.href = `details.html?imdbID=${imdbID}`;
+    window.location.href = `details/details.html?imdbID=${imdbID}`;
   }
 
   function goToFavoritesPage() {
     // Redirect to the favorites.html page or perform any other action
-    window.location.href = 'favorites.html';
+    window.location.href = 'favorites/favorites.html';
 }
 
 
@@ -117,7 +117,7 @@ async function addToFavorites(imdbID) {
     alert(`${movie.Title} is added to your favorites`);
   } else {
     // If already in favorites, remove it
-    favorites.splice(existingIndex, 1);
+    alert(`${movie.Title} is already added to your favorites`);
   }
   
 
