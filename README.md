@@ -54,6 +54,10 @@ Some Sample Images:
 ![1](https://github.com/Ayushjaiswal2000/IMDB-clone-app/assets/86403516/310c9605-2374-4dfa-82e1-c2f519b1c039)
 
 
+
+
+
+
 ![image](https://github.com/Ayushjaiswal2000/IMDB-clone-app/assets/86403516/6c58e1d2-d6db-4e0e-917d-ac3c7ca84a45)
 
 
@@ -61,11 +65,3 @@ Some Sample Images:
 
 
 
-
-
-
-
-Contributions are welcome! If you have any suggestions or want to report issues, feel free to submit a pull request or open an issue on GitHub.
-
-
-Enjoy searching and organizing your favorite movies with this simple OMDb Movie Search App!
